@@ -1,6 +1,6 @@
 interface:
   display_name: "Future Brief"
-  short_description: "在 Future Clinic 前确认目标、事实边界与关键用户未知"
-  default_prompt: "Use $future-brief to clarify my goal, verify what can be checked, identify only route-changing user unknowns, and prepare a short Future Brief."
+  short_description: "在聊天中对齐研究目标、澄清实质歧义，并交付与文件同正文的 Brief"
+  default_prompt: "Use $future-brief to show your understanding of my task, clarify unresolved differences that would change the research, and deliver the complete Brief in chat with the same body saved to Markdown."
 policy:
   allow_implicit_invocation: false
