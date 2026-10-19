@@ -2,7 +2,9 @@
 
 在深入研究之前，让用户看见任务被怎样理解，澄清会改变研究的歧义。
 
-Future Brief 是前置需求对齐 Skill：复用已有答案，先在聊天展示当前理解，针对尚未解决的目标、范围、成功标准或重要取舍自然追问。回答会实际改变正文；任务已经明确就直接交付，不固定问题数或确认轮次。
+Future Brief 是前置需求对齐 Skill：从产物或手段追到希望实现的结果，用动词说明需要完成的作用，再在聊天展示当前理解。复用已有答案，针对尚未解决的目标、范围、成功标准或重要取舍自然追问。回答会实际改变正文；任务已经明确就直接交付，不固定问题数或确认轮次。
+
+有价值时可提出更高一层的目标，但用户已确认目标与模型新建议分别表达；未被采纳的建议不进入必做范围，也不阻断原已明确任务。指定产物或创作题无需一律拔高。
 
 它允许比较不同任务解释，但不生成解决方案候选、推荐或 PDF，不自动进入下一阶段，也不要求为了体现问诊而强行提问。
 
@@ -40,7 +42,9 @@ Brief 就绪后，由用户检查并手动调用 [Future Clinic](https://github.
 node --test tests/*.test.mjs
 ```
 
-这些测试只检查指令约束，不证明实际问诊质量。行为验收方法见 [可见需求对齐验收](tests/visible-alignment.acceptance.md)，合成原始输入位于 tests/fixtures/visible-alignment.json；不要把评判标准交给被测模型。仓库不包含真实业务对话或历史运行记录。
+这些测试只检查指令约束，不证明实际问诊质量。行为验收方法见 [可见需求对齐验收](tests/visible-alignment.acceptance.md) 和 [任务表达与更高目标验收](tests/task-construction.acceptance.md)，合成原始输入位于 tests/fixtures/visible-alignment.json；不要把评判标准交给被测模型。仓库不包含真实业务对话或历史运行记录。
+
+本次方法修订参考 Felix Rieseberg 的[作者原文](https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/)，适配范围与实际检查状态见 [变更记录 Comments](CHANGELOG.md)。
 
 ## 许可
 
