@@ -46,6 +46,6 @@ test("evidence categories and Brief scope remain explicit", () => {
     assert.ok(skill.includes(label));
   }
   assert.match(skill, /不负责生成 PDF/);
-  assert.match(skill, /不创建或调用 Agent/);
+  // Temporary Agent collaboration is allowed; this guard must not restore the retired ban.
   assert.match(skill, /解决方案候选/);
 });
